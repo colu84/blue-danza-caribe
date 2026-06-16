@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Blue Danza Caribe</title>
+    <meta name="description" content="Foto e video dei corsi, delle serate e della community di Blue Danza Caribe.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBlue: '#0033ff',
+                        brandPink: '#ff00cc',
+                        darkBg: '#030513',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030513; color: #f8fafc; }
+        .glass { background: rgba(3, 5, 19, 0.6); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-glass { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .card-glass:hover { border-color: rgba(255, 255, 255, 0.2); background: rgba(15, 23, 42, 0.6); }
+        .text-gradient { background: linear-gradient(135deg, #00d4ff, #ff00cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #0033ff, #ff00cc); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandBlue/30 selection:text-white relative min-h-screen">
+
+    <!-- MODERN ABSTRACT NEON BACKGROUND -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#030513]">
+        <div class="absolute top-[10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[150px] mix-blend-screen"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-brandBlue/15 rounded-full blur-[150px] mix-blend-screen"></div>
+        <div class="absolute inset-0 opacity-[0.03] mix-blend-screen bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4=')]"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img src="logo.jpeg" alt="Blue Danza Caribe Logo" class="h-16 w-auto object-contain">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#corsi" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">I Nostri Corsi</a>
+                    <a href="index.html#orari" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">Orari & Sedi</a>
+                    <a href="index.html#staff" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">Maestri</a>
+                    <a href="eventi.html" class="text-sm font-bold text-brandPink hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(255,0,204,0.5)]">Eventi</a>
+                    <a href="gallery.html" class="text-sm font-bold text-brandBlue hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(0,51,255,0.5)] border-b-2 border-brandBlue">Gallery</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/393472584134?text=Ciao!%20Vorrei%20informazioni%20sui%20corsi." class="bg-brandBlue text-white hover:bg-blue-600 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(0,51,255,0.4)] border border-blue-500/50">
+                        Contattaci
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER GALLERY -->
+    <section class="relative pt-40 pb-20 overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full card-glass mb-8 shadow-sm border border-brandBlue/30">
+                <span class="flex h-2 w-2 rounded-full bg-brandBlue animate-pulse shadow-[0_0_10px_#0033ff]"></span>
+                <span class="text-sm font-bold text-slate-200">Foto & Video</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 text-white leading-[1.1]">
+                <span class="text-gradient drop-shadow-[0_0_30px_rgba(0,51,255,0.3)]">Vivi l'Energia</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto font-medium">Un assaggio della nostra community in azione tra stage, serate e show spettacolari.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="py-12 relative z-10 min-h-[40vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Placeholder Image 1 -->
+                <div class="aspect-square rounded-2xl overflow-hidden card-glass group relative cursor-pointer border border-white/5 hover:border-brandBlue/50 transition-all hover:scale-105 hover:z-10 shadow-lg">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="absolute text-xs text-slate-500 font-bold bottom-4">Aggiungi foto qui</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Image 2 -->
+                <div class="aspect-square rounded-2xl overflow-hidden card-glass group relative cursor-pointer border border-white/5 hover:border-brandPink/50 transition-all hover:scale-105 hover:z-10 shadow-lg md:col-span-2 md:row-span-2">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="absolute text-sm text-slate-500 font-bold bottom-8">Video Highlight Serata</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Image 3 -->
+                <div class="aspect-square rounded-2xl overflow-hidden card-glass group relative cursor-pointer border border-white/5 hover:border-cyan-400/50 transition-all hover:scale-105 hover:z-10 shadow-lg">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Placeholder Image 4 -->
+                <div class="aspect-square rounded-2xl overflow-hidden card-glass group relative cursor-pointer border border-white/5 hover:border-brandBlue/50 transition-all hover:scale-105 hover:z-10 shadow-lg">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                </div>
+
+                 <!-- Placeholder Image 5 -->
+                <div class="aspect-square rounded-2xl overflow-hidden card-glass group relative cursor-pointer border border-white/5 hover:border-brandPink/50 transition-all hover:scale-105 hover:z-10 shadow-lg">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/blue_danza_caribe/" target="_blank" class="inline-flex items-center gap-3 card-glass hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold transition-all border border-white/10 hover:border-brandPink/50">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Seguici su Instagram per altre foto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black/80 border-t border-white/5 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="logo.jpeg" alt="Blue Danza Caribe Logo" class="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8 text-sm font-bold text-slate-500">
+                    <span>Riccione & Rimini</span>
+                    <a href="https://www.instagram.com/blue_danza_caribe/" target="_blank" class="hover:text-brandPink transition-colors">Instagram</a>
+                    <a href="https://www.facebook.com/bluedanzacaribe" target="_blank" class="hover:text-brandBlue transition-colors">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

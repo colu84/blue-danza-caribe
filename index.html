@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Danza Caribe | Stefano & Beatrice</title>
+    <meta name="description" content="Blue Danza Caribe: Scuola di Danze Caraibiche a Riccione e Rimini con Stefano & Beatrice. Corsi di Salsa, Bachata e molto altro.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBlue: '#0033ff', // Blu elettrico dal logo
+                        brandPink: '#ff00cc', // Rosa/Magenta acceso dal logo
+                        darkBg: '#030513', // Deep space dark blue
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030513; color: #f8fafc; }
+        .glass { background: rgba(3, 5, 19, 0.6); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-glass { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .card-glass:hover { border-color: rgba(255, 255, 255, 0.2); background: rgba(15, 23, 42, 0.6); }
+        .text-gradient { background: linear-gradient(135deg, #00d4ff, #ff00cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #0033ff, #ff00cc); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandPink/30 selection:text-white relative min-h-screen">
+
+    <!-- MODERN ABSTRACT NEON BACKGROUND (Reminiscent of old site) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#030513]">
+        <!-- Glowing Orbs -->
+        <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-brandBlue/20 rounded-full blur-[150px] mix-blend-screen"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brandPink/15 rounded-full blur-[150px] mix-blend-screen"></div>
+        <div class="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-cyan-500/10 rounded-full blur-[120px] mix-blend-screen"></div>
+        
+        <!-- Light Beams / Laser Effects -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[2px] bg-gradient-to-r from-transparent via-brandBlue/30 to-transparent rotate-45 blur-[2px]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent rotate-45"></div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[2px] bg-gradient-to-r from-transparent via-brandPink/30 to-transparent -rotate-12 blur-[2px]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-pink-400/50 to-transparent -rotate-12"></div>
+        
+        <!-- Starry subtle noise overlay -->
+        <div class="absolute inset-0 opacity-[0.03] mix-blend-screen bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4=')]"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="logo.jpeg" alt="Blue Danza Caribe Logo" class="h-16 w-auto object-contain">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#corsi" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">I Nostri Corsi</a>
+                    <a href="index.html#orari" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">Orari & Sedi</a>
+                    <a href="index.html#staff" class="text-sm font-bold text-slate-300 hover:text-white transition-colors">Maestri</a>
+                    <a href="eventi.html" class="text-sm font-bold text-brandPink hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(255,0,204,0.5)]">Eventi</a>
+                    <a href="gallery.html" class="text-sm font-bold text-brandBlue hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(0,51,255,0.5)]">Gallery</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#prova" class="bg-brandBlue text-white hover:bg-blue-600 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(0,51,255,0.4)] border border-blue-500/50">
+                        Prenota Prova
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full card-glass mb-8 shadow-sm">
+                <span class="flex h-2 w-2 rounded-full bg-brandPink animate-pulse shadow-[0_0_10px_#ff00cc]"></span>
+                <span class="text-sm font-bold text-slate-200">Nuovi corsi in partenza a Riccione e Rimini</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-[1.1] text-white">
+                L'energia della Riviera.<br>
+                <span class="text-gradient drop-shadow-[0_0_30px_rgba(255,0,204,0.3)]">La passione del ballo.</span>
+            </h1>
+            
+            <p class="mt-6 max-w-2xl text-xl text-slate-300 mx-auto mb-10 leading-relaxed font-medium">
+                Con i maestri <strong>Tiziana, Luigi, Stefano e Beatrice</strong>, ogni passo si trasforma in un'emozione. Entra nella community caraibica più esclusiva e vivace. Zero stress, 100% divertimento in pista.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="flex flex-col items-center">
+                    <a href="#prova" class="w-full sm:w-auto bg-gradient-brand text-white px-8 py-4 rounded-full font-black text-lg transition-all transform hover:-translate-y-1 shadow-[0_0_30px_rgba(255,0,204,0.4)] flex items-center justify-center gap-3 border border-white/20">
+                        Prenota la Lezione Gratuita
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <span class="text-xs text-slate-400 mt-3 font-bold flex items-center gap-1">
+                        <svg class="w-4 h-4 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        Senza alcun impegno
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. VALUE PROPOSITION -->
+    <section class="py-24 relative z-10 border-y border-white/5 bg-darkBg/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-white mb-4">Ballare dal primo giorno.</h2>
+                <p class="text-lg text-slate-400 font-medium max-w-2xl mx-auto">Un metodo di insegnamento diretto e divertente. Dimentica le lezioni noiose, con i nostri maestri si va subito al sodo.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-glass p-8 rounded-3xl transition-all transform hover:-translate-y-1 shadow-lg shadow-black/50 hover:shadow-brandBlue/20">
+                    <div class="w-14 h-14 bg-brandBlue/20 text-brandBlue rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-brandBlue/30">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">Non serve in coppia</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Vieni da solo o con gli amici. Le rotazioni continue durante i corsi ti permetteranno di imparare in fretta e fare nuove conoscenze.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-glass p-8 rounded-3xl transition-all transform hover:-translate-y-1 shadow-lg shadow-black/50 hover:shadow-brandPink/20">
+                    <div class="w-14 h-14 bg-brandPink/20 text-brandPink rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-brandPink/30">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">Metodo Immersivo</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Anni di esperienza condensati in un metodo che ti porta in pista subito. Focus estremo sulla musicalità e vera connessione di coppia.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-glass p-8 rounded-3xl transition-all transform hover:-translate-y-1 shadow-lg shadow-black/50 hover:shadow-cyan-500/20">
+                    <div class="w-14 h-14 bg-cyan-500/20 text-cyan-400 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-cyan-500/30">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">Vera Community</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Serate latine, stage, uscite di gruppo e cene sociali. Non compri un corso di ballo, ma entri in una vera e propria seconda famiglia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. I NOSTRI CORSI -->
+    <section id="corsi" class="py-24 relative z-10 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-black text-white mb-4">Le Nostre Discipline</h2>
+                    <p class="text-lg text-slate-400 max-w-xl font-medium">Salsa (tutti gli stili), Bachata Fusion, Kizomba e Semba. Classi studiate per esplodere in pista.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="group relative overflow-hidden rounded-3xl card-glass transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,51,255,0.2)]">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brandBlue shadow-[0_0_10px_#0033ff]"></div>
+                    <div class="p-10 h-full relative z-10 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-brandBlue/20 text-blue-300 text-xs font-black mb-6 tracking-wide uppercase border border-brandBlue/30">Dinamismo Puro</span>
+                            <h3 class="text-3xl font-black text-white mb-4 group-hover:text-blue-400 transition-colors">Salsa</h3>
+                            <p class="text-slate-400 text-base mb-8 leading-relaxed font-medium">L'anima ritmica dei Caraibi a 360°. Che sia Cubana, in Linea, Portoricana o New York Style, ti insegneremo l'essenza della vera conduzione e connessione.</p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <span class="text-sm font-bold text-white group-hover:text-brandBlue transition-colors flex items-center gap-2 cursor-pointer">
+                                Scopri di più <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="group relative overflow-hidden rounded-3xl card-glass transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,0,204,0.2)]">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brandPink shadow-[0_0_10px_#ff00cc]"></div>
+                    <div class="p-10 h-full relative z-10 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-brandPink/20 text-pink-300 text-xs font-black mb-6 tracking-wide uppercase border border-brandPink/30">Fluidità</span>
+                            <h3 class="text-3xl font-black text-white mb-4 group-hover:text-pink-400 transition-colors">Bachata Fusion</h3>
+                            <p class="text-slate-400 text-base mb-8 leading-relaxed font-medium">Non la solita "sensual". Uniamo footwork dominicano e tecniche moderne per un ballo ricco di stile, musicalità e profondo rispetto del partner in ogni figura.</p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <span class="text-sm font-bold text-white group-hover:text-brandPink transition-colors flex items-center gap-2 cursor-pointer">
+                                Scopri di più <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="group relative overflow-hidden rounded-3xl card-glass transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,242,254,0.2)]">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-cyan-400 shadow-[0_0_10px_#00f2fe]"></div>
+                    <div class="p-10 h-full relative z-10 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-black mb-6 tracking-wide uppercase border border-cyan-500/30">Connessione</span>
+                            <h3 class="text-3xl font-black text-white mb-4 group-hover:text-cyan-400 transition-colors">Kizomba & Semba</h3>
+                            <p class="text-slate-400 text-base mb-8 leading-relaxed font-medium">L'abbraccio perfetto. Impara le radici africane del Semba e la tecnica profonda della Kizomba per muoverti all'unisono totale con la musica e il partner.</p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <span class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors flex items-center gap-2 cursor-pointer">
+                                Scopri di più <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ORARI E SEDI -->
+    <section id="orari" class="py-24 relative z-10 bg-darkBg/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Info -->
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full card-glass mb-6 shadow-sm border-brandBlue/30 border">
+                        <svg class="w-5 h-5 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="text-sm font-bold text-slate-200">Riccione e Rimini</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-6 leading-[1.1]">Le nostre sedi principali.</h2>
+                    <p class="text-lg text-slate-400 mb-8 leading-relaxed font-medium">
+                        Scegli la location più vicina a te. Sale luminose e spaziose con pavimentazioni adatte al ballo.
+                    </p>
+                    
+                    <!-- Sede Riccione -->
+                    <div class="card-glass p-6 rounded-2xl border-l-4 border-l-brandBlue mb-6">
+                        <h4 class="font-black text-white mb-1 text-lg">Centro Danza Art. Sceniche</h4>
+                        <p class="text-slate-400 text-sm font-medium">Viale Murano 10 - Riccione</p>
+                        <a href="https://maps.google.com/?q=Viale+Murano+10+Riccione" target="_blank" class="inline-flex items-center gap-1 mt-4 text-blue-400 text-sm font-bold hover:text-blue-300">Ottieni indicazioni <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+
+                    <!-- Sede Rimini -->
+                    <div class="card-glass p-6 rounded-2xl border-l-4 border-l-brandPink mb-8">
+                        <h4 class="font-black text-white mb-1 text-lg">Manuale Olistico Schilling</h4>
+                        <p class="text-slate-400 text-sm font-medium">Via Draghi 19 - Rimini</p>
+                        <a href="https://maps.google.com/?q=Via+Draghi+19+Rimini" target="_blank" class="inline-flex items-center gap-1 mt-4 text-pink-400 text-sm font-bold hover:text-pink-300">Ottieni indicazioni <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Promo & Info Block -->
+                <div class="card-glass rounded-3xl overflow-hidden shadow-2xl shadow-black/50 flex flex-col justify-between border-brandBlue/30 border">
+                    <div class="p-8 border-b border-white/5 bg-white/5 flex justify-between items-center">
+                        <h3 class="font-black text-xl text-white">Promozioni 2025</h3>
+                        <span class="text-xs bg-brandPink text-white font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-[0_0_10px_#ff00cc]">Promo</span>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-slate-300 text-sm"><strong class="text-white">Corso di Bachata Intermedio GRATUITO</strong> per chi si iscrive a qualsiasi altro nostro corso.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-slate-300 text-sm">A Riccione attiva la <strong class="text-white">sala SOCIAL</strong> (il martedì) per tutti i nostri allievi per esercitarsi liberamente.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-slate-300 text-sm"><strong class="text-brandPink">SEI UNDER 30? PAGHI LA METÀ</strong> (sempre!).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-slate-300 text-sm">Corsi inferiori gratuiti per ripasso. Oltre 20 ore settimanali e sconti per famiglie.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white/5 text-center border-t border-white/5">
+                        <p class="text-sm font-medium text-slate-400">Contattaci per scoprire i giorni esatti dei corsi! <a href="#prova" class="text-brandBlue font-bold hover:text-white transition-colors">Scrivici su WhatsApp</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. I NOSTRI MAESTRI (STAFF) -->
+    <section id="staff" class="py-24 relative z-10 border-t border-white/5 bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-white mb-4">I Nostri Maestri.</h2>
+                <p class="text-lg text-slate-400 font-medium max-w-2xl mx-auto">Professionisti appassionati pronti a trasmetterti tutta l'energia del mondo latino.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Tiziana -->
+                <div class="card-glass rounded-3xl p-6 flex flex-col items-center text-center group transition-all hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,0,204,0.15)] border border-brandPink/10 hover:border-brandPink/30">
+                    <div class="w-32 h-32 rounded-full bg-brandPink/20 flex items-center justify-center mb-6 overflow-hidden border-2 border-brandPink/50 group-hover:scale-105 transition-transform relative">
+                        <img src="images/staff/tiziana.jpg" alt="Tiziana" class="w-full h-full object-cover absolute inset-0 z-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="w-12 h-12 text-brandPink hidden z-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-1">Tiziana</h3>
+                    <p class="text-brandPink font-bold text-sm mb-3">Salsa & Bachata Fusion</p>
+                    <p class="text-slate-400 text-xs font-medium leading-relaxed">Tecnica, stile ed eleganza. Guida perfetta in ogni stile della Salsa (Cubana, Portoricana, NY) e nella Bachata Fusion.</p>
+                </div>
+
+                <!-- Luigi -->
+                <div class="card-glass rounded-3xl p-6 flex flex-col items-center text-center group transition-all hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(0,51,255,0.15)] border border-brandBlue/10 hover:border-brandBlue/30">
+                    <div class="w-32 h-32 rounded-full bg-brandBlue/20 flex items-center justify-center mb-6 overflow-hidden border-2 border-brandBlue/50 group-hover:scale-105 transition-transform relative">
+                        <img src="images/staff/luigi.jpg" alt="Luigi" class="w-full h-full object-cover absolute inset-0 z-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="w-12 h-12 text-brandBlue hidden z-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-1">Luigi</h3>
+                    <p class="text-brandBlue font-bold text-sm mb-3">Salsa & Bachata Fusion</p>
+                    <p class="text-slate-400 text-xs font-medium leading-relaxed">Energia pura. Ti trasmetterà il vero sabor caraibico e la precisione millimetrica della conduzione maschile in pista.</p>
+                </div>
+
+                <!-- Stefano -->
+                <div class="card-glass rounded-3xl p-6 flex flex-col items-center text-center group transition-all hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(0,242,254,0.15)] border border-cyan-500/10 hover:border-cyan-500/30">
+                    <div class="w-32 h-32 rounded-full bg-cyan-500/20 flex items-center justify-center mb-6 overflow-hidden border-2 border-cyan-500/50 group-hover:scale-105 transition-transform relative">
+                        <img src="images/staff/stefano.jpg" alt="Stefano" class="w-full h-full object-cover absolute inset-0 z-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="w-12 h-12 text-cyan-400 hidden z-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-1">Stefano</h3>
+                    <p class="text-cyan-400 font-bold text-sm mb-3">Specialista Kizomba/Semba</p>
+                    <p class="text-slate-400 text-xs font-medium leading-relaxed">Maestro di connessione e radici africane. Insegna in modo poliedrico: dal Semba dinamico, alla Salsa, alla Bachata.</p>
+                </div>
+
+                <!-- Beatrice -->
+                <div class="card-glass rounded-3xl p-6 flex flex-col items-center text-center group transition-all hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,0,204,0.15)] border border-brandPink/10 hover:border-brandPink/30">
+                    <div class="w-32 h-32 rounded-full bg-brandPink/20 flex items-center justify-center mb-6 overflow-hidden border-2 border-brandPink/50 group-hover:scale-105 transition-transform relative">
+                        <img src="images/staff/beatrice.jpg" alt="Beatrice" class="w-full h-full object-cover absolute inset-0 z-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="w-12 h-12 text-brandPink hidden z-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-1">Beatrice</h3>
+                    <p class="text-brandPink font-bold text-sm mb-3">Specialista Kizomba/Semba</p>
+                    <p class="text-slate-400 text-xs font-medium leading-relaxed">Versatilità e dolcezza. Accompagna gli allievi dai primi passi fino alla padronanza avanzata di Kizomba, Semba e danze caraibiche.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SOCIAL PROOF & COMMUNITY -->
+    <section id="community" class="py-24 relative z-10 border-t border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-4xl font-black text-white mb-4">Cosa dicono di noi.</h2>
+            <p class="text-lg text-slate-400 font-medium">L'energia dei nostri allievi è il nostro biglietto da visita migliore.</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card-glass p-8 rounded-3xl shadow-sm hover:shadow-brandBlue/10 transition-shadow">
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-slate-300 font-medium italic mb-6 leading-relaxed">"Stefano e Beatrice sanno metterti a tuo agio istantaneamente. Imparare a ballare con loro è una passeggiata, anche per chi come me aveva due piedi sinistri!"</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-lg">M</div>
+                    <div>
+                        <div class="font-bold text-white">Marco R.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-glass p-8 rounded-3xl shadow-sm hover:shadow-brandPink/10 transition-shadow">
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-slate-300 font-medium italic mb-6 leading-relaxed">"Ambiente giovanile, serate organizzate benissimo e didattica al top. Non posso più fare a meno delle loro lezioni di Bachata."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brandPink text-white flex items-center justify-center font-bold text-lg">S</div>
+                    <div>
+                        <div class="font-bold text-white">Sara T.</div>
+                    </div>
+                </div>
+            </div>
+             <div class="card-glass p-8 rounded-3xl shadow-sm hover:shadow-cyan-500/10 transition-shadow hidden md:block">
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-slate-300 font-medium italic mb-6 leading-relaxed">"La miglior scuola di ballo in zona. Professionalità e divertimento in perfetta sintonia. Consigliatissima a tutti, coppie e single!"</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">L</div>
+                    <div>
+                        <div class="font-bold text-white">Luca M.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FINAL CTA -->
+    <section id="prova" class="py-24 relative overflow-hidden border-t border-white/5 bg-darkBg">
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center card-glass rounded-3xl shadow-2xl shadow-black/50 p-12 md:p-20 border border-brandPink/30">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-4 leading-[1.1]">Il tuo primo passo.</h2>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-medium">Non farti sfuggire l'occasione. Manda un messaggio ai maestri per riservare il tuo posto.</p>
+            
+            <a href="https://wa.me/393472584134?text=Ciao!%20Vorrei%20informazioni%20sui%20corsi%20di%20ballo." class="inline-flex items-center gap-3 bg-gradient-brand text-white px-8 py-5 rounded-full font-black text-xl transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(255,0,204,0.4)] border border-white/20">
+                <!-- WhatsApp Icon SVG -->
+                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                Contattaci
+            </a>
+            
+            <p class="text-sm text-slate-500 mt-6">Oppure chiamaci: <a href="tel:3472584134" class="text-white font-bold">347-25.84.134</a> / <a href="tel:3405462182" class="text-white font-bold">340-54.62.182</a></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black/80 border-t border-white/5 py-12 pb-24 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center">
+                    <img src="logo.jpeg" alt="Blue Danza Caribe Logo" class="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-8 text-sm font-bold text-slate-500">
+                    <span>Riccione & Rimini</span>
+                    <a href="https://www.instagram.com/blue_danza_caribe/" target="_blank" class="hover:text-brandPink transition-colors">Instagram</a>
+                    <a href="https://www.facebook.com/bluedanzacaribe" target="_blank" class="hover:text-brandBlue transition-colors">Facebook</a>
+                </div>
+            </div>
+            <div class="mt-10 text-center text-xs font-semibold text-slate-600">
+                &copy; 2026 Blue Danza Caribe ASD. Stefano e Beatrice Kizomba e Salsa.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 6. ELEMENTI COMMERCIALI "FAST ACTION" -->
+    
+    <!-- Floating WhatsApp Button (FAB) -->
+    <a href="https://wa.me/393472584134?text=Ciao!%20Vorrei%20info%20sui%20corsi." class="fixed bottom-20 md:bottom-8 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-lg shadow-[#25D366]/40 hover:scale-110 transition-all duration-300 flex items-center group border border-white/20">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-bold group-hover:ml-3">
+            Scrivici!
+        </span>
+    </a>
+
+    <!-- Sticky Mobile Bar -->
+    <div class="fixed bottom-0 left-0 w-full z-40 bg-black/80 backdrop-blur-md border-t border-white/10 p-4 md:hidden shadow-[0_-10px_20px_rgba(0,0,0,0.5)]">
+        <a href="#prova" class="block w-full bg-gradient-brand text-center text-white font-black py-3.5 rounded-full shadow-[0_0_20px_rgba(255,0,204,0.4)] border border-white/20">
+            Prenota Prova Gratuita
+        </a>
+    </div>
+
+</body>
+</html>
