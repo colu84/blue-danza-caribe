@@ -71,6 +71,24 @@
                         Prenota Prova
                     </a>
                 </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white p-2 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#030513]/95 backdrop-blur-xl border-t border-white/10 absolute top-20 left-0 w-full shadow-2xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html#corsi" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 text-base font-bold text-white hover:bg-white/5 rounded-xl">I Nostri Corsi</a>
+                <a href="index.html#orari" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 text-base font-bold text-white hover:bg-white/5 rounded-xl">Orari & Sedi</a>
+                <a href="index.html#staff" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 text-base font-bold text-white hover:bg-white/5 rounded-xl">Maestri</a>
+                <a href="eventi.html" class="block px-3 py-3 text-base font-bold text-brandPink hover:bg-white/5 rounded-xl">Eventi</a>
+                <a href="gallery.html" class="block px-3 py-3 text-base font-bold text-brandBlue hover:bg-white/5 rounded-xl">Gallery</a>
+                <a href="#prova" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="mt-4 block text-center bg-brandBlue text-white px-6 py-3 rounded-full font-bold shadow-[0_0_20px_rgba(0,51,255,0.4)]">Prenota Prova</a>
             </div>
         </div>
     </nav>
